@@ -9,6 +9,8 @@ RUN npm install
 
 COPY . .
 
+ENV DATABASE_URL = mongodb://mongo:27017/myDatabase
+
 RUN npm run build 
 
 CMD ["node","dist/index.js"]
